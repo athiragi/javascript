@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function numvalidate(){
+            var n=document.numform.num.value;
+            if(isNaN(n)){
+                document.getElementById("numloc").innerHTML="Enter Numeric value only";
+                return false;
+            }
+            else{
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="numform" onsubmit=" return numvalidate()"> 
+        <label  for="number">Number :</label>
+        <input type="text" name="num"><br><span id="numloc"></span><br><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

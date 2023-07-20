@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function emvalidate(){
+            var e=document.emailval.email.value;
+            var b=e.indexOf("@");
+            var d=e.lastIndexOf(".")
+            if(b<1||d<b+2||d+2>=e.length){
+                alert("please enter valide email address");
+                return false;
+            }
+            else{
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="emailval" method="post" onsubmit="return emvalidate()">
+        <label for="email"> Email :</label>
+        <input type="text" name="email"><br/>
+        <button type="submit">Submit</button>
+
+    </form>
+</body>
+</html>
